@@ -1,0 +1,41 @@
+.about-section {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9f2ff 100%);
+    animation: fadeIn 0.8s ease-in;
+  }
+  
+  .profile-pic-container {
+    position: relative;
+    display: inline-block;
+    transition: transform 0.3s ease;
+  }
+  
+  .profile-pic-container:hover {
+    transform: scale(1.05);
+  }
+  
+  .profile-pic {
+    border: 5px solid #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .profile-pic:hover {
+    transform: scale(1.08);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  }
+  
+  .about-section h2 {
+    letter-spacing: 1px;
+    font-size: 2rem;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
