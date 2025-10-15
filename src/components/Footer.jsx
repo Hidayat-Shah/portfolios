@@ -4,7 +4,6 @@ import { FaLinkedin, FaGithub, FaEnvelope, FaWhatsapp } from "react-icons/fa";
 import './Footer.css';
 
 const Footer = () => {
-  // 🌍 Load from environment variables
   const linkedIn = import.meta.env.VITE_LINKEDIN;
   const github = import.meta.env.VITE_GITHUB;
   const email = import.meta.env.VITE_EMAIL;
@@ -15,29 +14,29 @@ const Footer = () => {
     <footer className="footer text-light py-4">
       <div className="container text-center">
         <div className="footer-social mb-3">
-          <a href={linkedIn} target="_blank" rel="noreferrer" className="social-icon">
+          <a href={linkedIn} target="_blank" rel="noreferrer" className="social-icon linkedin">
             <FaLinkedin />
           </a>
 
-          <a href={github} target="_blank" rel="noreferrer" className="social-icon">
+          <a href={github} target="_blank" rel="noreferrer" className="social-icon github">
             <FaGithub />
           </a>
 
-          <a href={`mailto:${email}`} className="social-icon">
+          <a href={`mailto:${email}`} className="social-icon email">
             <FaEnvelope />
           </a>
 
-          <a 
-            href={`https://wa.me/${whatsappNumber}`} 
-            target="_blank" 
-            rel="noreferrer" 
+          <a
+            href={`https://wa.me/${whatsappNumber}`}
+            target="_blank"
+            rel="noreferrer"
             className="social-icon whatsapp"
           >
             <FaWhatsapp />
           </a>
         </div>
 
-        <p className="mb-0">
+        <p className="mb-0 fade-in">
           &copy; {new Date().getFullYear()} <strong>{name}</strong>. All Rights Reserved.
         </p>
       </div>
@@ -46,6 +45,7 @@ const Footer = () => {
 };
 
 export default Footer;
+
 
 
 

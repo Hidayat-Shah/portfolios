@@ -1,8 +1,11 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./Projects.css";
+import Slider from "react-slick";
 import project1 from "../assets/project1.jfif";
 import project2 from "../assets/project2.PNG";
+import "./Projects.css";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const projects = [
   {
@@ -25,9 +28,47 @@ const projects = [
     demo: "#",
     github: "#",
   },
+  {
+    id: 3,
+    title: "Portfolio Website",
+    description:
+      "A personal portfolio showcasing my web development projects and skills.",
+    image: project2,
+    tech: "React, Bootstrap, CSS",
+    demo: "#",
+    github: "#",
+  },
+  {
+    id: 4,
+    title: "E-Commerce System",
+    description:
+      "An online shopping platform with cart, billing, and stock management features.",
+    image: project1,
+    tech: "React, Node.js, MySQL",
+    demo: "#",
+    github: "#",
+  },
 ];
 
 const Projects = () => {
+  // 🔹 Slider settings
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 800,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    pauseOnHover: true,
+    responsive: [
+      {
+        breakpoint: 768, // for mobile
+        settings: { slidesToShow: 1 },
+      },
+    ],
+  };
+
   return (
     <section id="projects" className="projects-section py-5">
       <div className="container">
@@ -35,9 +76,9 @@ const Projects = () => {
           My <span className="text-dark">Projects</span>
         </h2>
 
-        <div className="row">
+        <Slider {...settings}>
           {projects.map((project) => (
-            <div key={project.id} className="col-md-6 mb-4">
+            <div key={project.id} className="p-3">
               <div className="project-card shadow-sm">
                 <img
                   src={project.image}
@@ -74,7 +115,7 @@ const Projects = () => {
               </div>
             </div>
           ))}
-        </div>
+        </Slider>
       </div>
     </section>
   );

@@ -16,6 +16,11 @@ const About = () => {
                 src={profilePic}
                 alt="Hidayat Shah"
                 className="img-fluid rounded-circle shadow-lg profile-pic"
+                style={{
+                  width: "270px",
+                  height: "270px",
+                  objectFit: "cover",
+                }}
               />
             </div>
           </div>

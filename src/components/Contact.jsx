@@ -40,7 +40,11 @@ const Contact = () => {
   return (
     <section id="contact" className="py-5 contact-section bg-light">
       <div className="container">
-        <h2 className="text-center mb-5">Contact Me</h2>
+
+        <h2 className="text-center mb-5 text-primary fw-bold">
+        Contact <span className="text-dark">Me</span>
+        </h2>
+
         <div className="row justify-content-center">
           <div className="col-md-6">
             <div className="contact-card p-4 shadow-lg rounded">

@@ -1,7 +1,9 @@
 /* Background map and overlay */
 .contact-section {
     position: relative;
-    background: url('../assets/map-bg.jpg') center/cover no-repeat; /* Replace with your map image */
+   /* Replace with your map image */
+   /* background: url('../assets/profile.jpg') center/cover no-repeat;  */
+   background: linear-gradient(135deg, #f8f9fa 0%, #e9f2ff 100%);
     background-size: cover;
     min-height: 100vh;
     padding-top: 100px;
