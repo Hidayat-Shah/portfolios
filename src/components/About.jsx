@@ -25,7 +25,7 @@ const About = () => {
             <h2 className="fw-bold mb-3 text-primary">About Me</h2>
             <p className="lead text-secondary">
               Hello! I’m <strong className="text-dark">Hidayat Shah</strong>, a passionate 
-              <span className="text-primary"> Software Developer</span> with expertise in 
+              <span className="text-primary"> Web Developer</span> with expertise in 
               React.js, Node.js, and modern web development. I focus on creating 
               interactive, responsive, and user-friendly applications.
             </p>
